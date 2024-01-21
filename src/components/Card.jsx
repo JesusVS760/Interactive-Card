@@ -6,7 +6,8 @@ import "./Card.css";
 
 const Card = () => {
   return (
-    <div className="back">
+    <div className="body">
+      <img src={Background} />
       <div className="container">
         <div className="card-container">
           <div className="cards">
@@ -26,8 +27,10 @@ const Card = () => {
                 <input type="text" placeholder="MM" />
                 <input type="text" placeholder="YY" />
               </div>
-              <p>CVC</p>
-              <input type="text" placeholder="e.g. 123" />
+              <div className="card-information-cvc">
+                <p>CVC</p>
+                <input type="text" placeholder="e.g. 123" />
+              </div>
             </div>
             <button>Confirm</button>
           </div>
