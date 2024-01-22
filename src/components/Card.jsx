@@ -25,6 +25,7 @@ const Card = () => {
             </div>
             <div className="card-back">
               <img src={BackCard} alt="back" />
+              <p className="card-back-text">000</p>
             </div>
           </div>
           <div className="card-inputs">
