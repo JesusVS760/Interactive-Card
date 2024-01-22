@@ -20,7 +20,22 @@
   align-items: center;
   flex-direction: column;
 }
-
+.card-front {
+  position: relative;
+}
+.card-front-text {
+  padding: 10px 25px;
+  top: 0;
+  position: absolute;
+  color: white;
+}
+.card-front-content {
+  display: flex;
+  justify-content: space-between;
+}
+.card-front-text p {
+  color: white;
+}
 .card-information-date {
   display: flex;
   margin-bottom: 25px;
@@ -35,7 +50,8 @@ input ::placeholder {
   color: hsl(270, 3%, 87%);
 }
 p {
-  margin-bottom: -1px;
+  font-size: 0.8rem;
+  color: hsl(278, 68%, 11%);
 }
 button {
   padding: 15px 0px;
@@ -48,7 +64,7 @@ button {
   cursor: pointer;
 }
 .cards :nth-child(1) {
-  margin-right: 150px;
+  margin-right: 175px;
   margin-bottom: 25px;
 }
 .card-information > input {

@@ -2,6 +2,7 @@ import React from "react";
 import BackCard from "../images/bg-card-back.png";
 import FrontCard from "../images/bg-card-front.png";
 import Background from "../images/bg-main-desktop.png";
+import CardLogo from "../images/card-logo.svg";
 import "./Card.css";
 
 const Card = () => {
@@ -11,8 +12,20 @@ const Card = () => {
       <div className="container">
         <div className="card-container">
           <div className="cards">
-            <img src={FrontCard} alt="front" />
-            <img src={BackCard} alt="back" />
+            <div className="card-front">
+              <img src={FrontCard} alt="front" />
+              <div className="card-front-text">
+                <img src={CardLogo} />
+                <h2 className="card-front-numbers">0000 0000 0000 0000</h2>
+                <div className="card-front-content">
+                  <p>JAKE APPLESEED</p>
+                  <p>00/00</p>
+                </div>
+              </div>
+            </div>
+            <div className="card-back">
+              <img src={BackCard} alt="back" />
+            </div>
           </div>
           <div className="card-inputs">
             <div className="card-information">
