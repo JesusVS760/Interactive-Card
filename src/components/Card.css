@@ -111,14 +111,10 @@ button {
     z-index: 99;
     margin-left: 200px;
   }
-  .cards :nth-child(2) {
-  }
+
   .card-back {
     margin-left: 150px;
   }
-  .card-front {
-  }
-
   .card-container {
     display: flex;
     flex-direction: column;
@@ -129,5 +125,18 @@ button {
   .body > img {
     width: 100vw;
     height: 35vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 0;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 50px;
+  }
+  .card-front {
+    padding-left: 125px;
   }
 }
