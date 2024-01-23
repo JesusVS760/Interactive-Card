@@ -96,7 +96,38 @@ button {
 }
 
 @media screen and (max-width: 900px) {
+  .container {
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 50px;
+    margin: 0;
+  }
+  .card-front {
+    margin: 0;
+    margin-top: -135px;
+    z-index: 99;
+    margin-left: 200px;
+  }
+  .cards :nth-child(2) {
+  }
+  .card-back {
+    margin-left: 150px;
+  }
+  .card-front {
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+  }
   body {
-    background: black;
+    background: white;
+  }
+  .body > img {
+    width: 100vw;
+    height: 35vh;
   }
 }

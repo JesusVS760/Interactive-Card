@@ -13,7 +13,7 @@ const Card = () => {
         <div className="card-container">
           <div className="cards">
             <div className="card-front">
-              <img src={FrontCard} alt="front" />
+              <img src={FrontCard} alt="front" className="desk-front-card" />
               <div className="card-front-text">
                 <img src={CardLogo} />
                 <h2 className="card-front-numbers">0000 0000 0000 0000</h2>
@@ -24,7 +24,7 @@ const Card = () => {
               </div>
             </div>
             <div className="card-back">
-              <img src={BackCard} alt="back" />
+              <img src={BackCard} className="desk-back-card" />
               <p className="card-back-text">000</p>
             </div>
           </div>
