@@ -27,7 +27,6 @@ const Card = () => {
                 <div className="card-front-content">
                   <p>{name}</p>
                   <p>{date}</p>
-                  <p>{date}</p>
                 </div>
               </div>
             </div>
@@ -43,6 +42,7 @@ const Card = () => {
                 <input
                   type="text"
                   placeholder="e.g. Jane Appleseed"
+                  maxLength={13}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -50,7 +50,11 @@ const Card = () => {
                 <input
                   type="text"
                   placeholder="e.g. 1234 5678 9123 0000"
-                  value={number}
+                  maxLength={19}
+                  value={number
+                    .replace(/\s/g, "")
+                    .replace(/(\d{4})/g, "$1 ")
+                    .trim()}
                   onChange={(e) => setNumber(e.target.value)}
                 />
               </div>
@@ -58,14 +62,8 @@ const Card = () => {
                 <div className="card-information-exp">
                   <p>EXP.DATE (MM/YY)</p>
                   <input
-                    type="text"
+                    type="date"
                     placeholder="MM"
-                    value={date}
-                    onChange={(e) => setDate(e.target.value)}
-                  />
-                  <input
-                    type="text"
-                    placeholder="YY"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                   />
@@ -75,6 +73,7 @@ const Card = () => {
                   <input
                     type="text"
                     placeholder="e.g. 123"
+                    maxLength={3}
                     value={cvc}
                     onChange={(e) => setCvc(e.target.value)}
                   />

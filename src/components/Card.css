@@ -3,7 +3,9 @@
   align-items: center;
   justify-content: center;
 }
-
+.desk-front-card,
+.desk-back-card {
+}
 .body > img {
   min-width: 30%;
   position: absolute;
@@ -79,7 +81,8 @@ button {
   padding: 15px;
 }
 .card-information-exp input {
-  width: 75px;
+  display: flex;
+  width: 180px;
   padding: 10px;
   margin-right: 10px;
 }
@@ -93,6 +96,9 @@ button {
   position: absolute;
   color: white;
   letter-spacing: 0.1rem;
+}
+
+.card-front-content :nth-child(1) {
 }
 
 @media screen and (max-width: 900px) {
