@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import BackCard from "../images/bg-card-back.png";
 import FrontCard from "../images/bg-card-front.png";
 import Background from "../images/bg-main-desktop.png";
 import CardLogo from "../images/card-logo.svg";
 import "./Card.css";
+import Confirmed from "./Confirmed";
 
 const Card = () => {
+  const [confirmed, setConfirmed] = useState(false);
+
   return (
     <div className="body">
       <img src={Background} />
@@ -46,9 +49,10 @@ const Card = () => {
                 <input type="text" placeholder="e.g. 123" />
               </div>
             </div>
-            <button>Confirm</button>
+            <button onClick={() => setConfirmed(true)}>Confirm</button>
           </div>
         </div>
+        {confirmed && <Confirmed />}
       </div>
     </div>
   );

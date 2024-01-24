@@ -5,7 +5,7 @@
 }
 
 .body > img {
-  min-width: 10%;
+  min-width: 30%;
   position: absolute;
   z-index: -1;
   height: 100vh;
@@ -96,9 +96,6 @@ button {
 }
 
 @media screen and (max-width: 900px) {
-  .container {
-  }
-
   .cards {
     display: flex;
     flex-direction: column-reverse;
