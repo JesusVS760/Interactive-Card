@@ -8,6 +8,10 @@ import Confirmed from "./Confirmed";
 
 const Card = () => {
   const [confirmed, setConfirmed] = useState(false);
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [date, setDate] = useState("");
+  const [cvc, setCvc] = useState("");
 
   return (
     <div className="body">
@@ -19,38 +23,66 @@ const Card = () => {
               <img src={FrontCard} alt="front" className="desk-front-card" />
               <div className="card-front-text">
                 <img src={CardLogo} />
-                <h2 className="card-front-numbers">0000 0000 0000 0000</h2>
+                <h2 className="card-front-numbers">{number}</h2>
                 <div className="card-front-content">
-                  <p>JAKE APPLESEED</p>
-                  <p>00/00</p>
+                  <p>{name}</p>
+                  <p>{date}</p>
+                  <p>{date}</p>
                 </div>
               </div>
             </div>
             <div className="card-back">
               <img src={BackCard} className="desk-back-card" />
-              <p className="card-back-text">000</p>
+              <p className="card-back-text">{cvc}</p>
             </div>
           </div>
-          <div className="card-inputs">
-            <div className="card-information">
-              <p>CARDHOLDER NAME</p>
-              <input type="text" placeholder="e.g. Jane Appleseed" />
-              <p>CARD NUMBER</p>
-              <input type="text" placeholder="e.g. 1234 5678 9123 0000" />
-            </div>
-            <div className="card-information-date">
-              <div className="card-information-exp">
-                <p>EXP.DATE (MM/YY)</p>
-                <input type="text" placeholder="MM" />
-                <input type="text" placeholder="YY" />
+          {!confirmed && (
+            <div className="card-inputs">
+              <div className="card-information">
+                <p>CARDHOLDER NAME</p>
+                <input
+                  type="text"
+                  placeholder="e.g. Jane Appleseed"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <p>CARD NUMBER</p>
+                <input
+                  type="text"
+                  placeholder="e.g. 1234 5678 9123 0000"
+                  value={number}
+                  onChange={(e) => setNumber(e.target.value)}
+                />
               </div>
-              <div className="card-information-cvc">
-                <p>CVC</p>
-                <input type="text" placeholder="e.g. 123" />
+              <div className="card-information-date">
+                <div className="card-information-exp">
+                  <p>EXP.DATE (MM/YY)</p>
+                  <input
+                    type="text"
+                    placeholder="MM"
+                    value={date}
+                    onChange={(e) => setDate(e.target.value)}
+                  />
+                  <input
+                    type="text"
+                    placeholder="YY"
+                    value={date}
+                    onChange={(e) => setDate(e.target.value)}
+                  />
+                </div>
+                <div className="card-information-cvc">
+                  <p>CVC</p>
+                  <input
+                    type="text"
+                    placeholder="e.g. 123"
+                    value={cvc}
+                    onChange={(e) => setCvc(e.target.value)}
+                  />
+                </div>
               </div>
+              <button onClick={() => setConfirmed(true)}>Confirm</button>
             </div>
-            <button onClick={() => setConfirmed(true)}>Confirm</button>
-          </div>
+          )}
         </div>
         {confirmed && <Confirmed setConfirmed={setConfirmed} />}
       </div>

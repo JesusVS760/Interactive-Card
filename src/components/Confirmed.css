@@ -1,0 +1,14 @@
+.confirmed-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.confirmed-container P {
+  margin-top: -20px;
+}
+.confirmed-container button {
+  margin-top: 25px;
+}
+.confirmed-container h1 {
+  font-size: 2rem;
+}
