@@ -52,7 +52,7 @@ const Card = () => {
             <button onClick={() => setConfirmed(true)}>Confirm</button>
           </div>
         </div>
-        {confirmed && <Confirmed />}
+        {confirmed && <Confirmed setConfirmed={setConfirmed} />}
       </div>
     </div>
   );
